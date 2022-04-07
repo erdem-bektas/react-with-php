@@ -1,11 +1,10 @@
 <?php
 
-$db = new PDO('mysql:host=localhost;dbname=react-php', 'root', '');
+$db = new PDO('mysql:host=localhost;dbname=<db-name>', '<username>', '<password>');
 
 $query = $db->prepare('INSERT INTO table_react_php SET
-textt = ?
+text = ?
 ');
-
 
 $recText = $_POST['text'];
 $add = $query->execute([
